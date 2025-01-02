@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./CommunicationModal.css";
 
 const CommunicationModal = ({ companyId, onClose }) => {
   const [type, setType] = useState("");
@@ -38,37 +39,48 @@ const CommunicationModal = ({ companyId, onClose }) => {
   };
 
   return (
-    <div className="modal">
-      <form onSubmit={handleSubmit}>
-        <label>Type</label>
-        <select value={type} onChange={(e) => setType(e.target.value)} required>
-          <option value="">Select</option>
-          <option value="LinkedIn Post">LinkedIn Post</option>
-          <option value="Email">Email</option>
-          <option value="Phone Call">Phone Call</option>
-          <option value="Other">Other</option>
-        </select>
+    <div className="modal-overlay">
+      <div className="modal">
+        <h2>Log Communication</h2>
+        <form onSubmit={handleSubmit}>
+          <label>Type</label>
+          <select
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            required
+          >
+            <option value="">Select</option>
+            <option value="LinkedIn Post">LinkedIn Post</option>
+            <option value="Email">Email</option>
+            <option value="Phone Call">Phone Call</option>
+            <option value="Other">Other</option>
+          </select>
 
-        <label>Date</label>
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
+          <label>Date</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
 
-        <label>Notes</label>
-        <textarea
-          value={notes}
-          onChange={(e) => setNotes(e.target.value)}
-          placeholder="Add any relevant notes (optional)"
-        />
+          <label>Notes</label>
+          <textarea
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+            placeholder="Add any relevant notes (optional)"
+          />
 
-        <button type="submit">Log Communication</button>
-        <button type="button" onClick={onClose}>
-          Cancel
-        </button>
-      </form>
+          <div className="button-group">
+            <button type="submit" className="submit-btn">
+              Log Communication
+            </button>
+            <button type="button" className="cancel-btn" onClick={onClose}>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

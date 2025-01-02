@@ -6,17 +6,40 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET || "your_secret_key_here"; // Replace for production
 
-// Register route (Only allows creating "user" accounts)
+// Register route (Allows creating "user" and "admin" accounts)
 router.post("/register", async (req, res) => {
-  const { username, email, password } = req.body;
+  const {
+    username,
+    email,
+    password,
+    role,
+    superAdminEmail,
+    superAdminPassword,
+  } = req.body;
 
-  if (!username || !email || !password) {
+  if (!username || !email || !password || !role) {
     return res
       .status(400)
-      .json({ error: "Username, email, and password are required." });
+      .json({ error: "Username, email, password, and role are required." });
   }
 
   try {
+    if (role === "admin") {
+      // Verify super admin credentials
+      const superAdmin = await User.findOne({
+        email: superAdminEmail,
+        role: "superadmin",
+      });
+      if (
+        !superAdmin ||
+        !(await superAdmin.comparePassword(superAdminPassword))
+      ) {
+        return res
+          .status(401)
+          .json({ error: "Invalid super admin credentials" });
+      }
+    }
+
     const userExists = await User.findOne({ email });
     if (userExists) {
       return res.status(400).json({ error: "Email is already registered." });
@@ -26,7 +49,7 @@ router.post("/register", async (req, res) => {
       username,
       email,
       password,
-      role: "user", // Default role for self-registration
+      role: role === "admin" ? "admin" : "user", // Set role based on input
     });
 
     await newUser.save();
