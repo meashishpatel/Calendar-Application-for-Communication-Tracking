@@ -16,6 +16,12 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/user", userRoutes);
+app.use(
+  cors({
+    origin:
+      "https://calendar-application-for-communication-tracking-drab.vercel.app/",
+  })
+);
 
 // Default Methods Initialization
 const initializeDefaultMethods = async () => {
