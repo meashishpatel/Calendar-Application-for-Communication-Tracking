@@ -1,8 +1,8 @@
+// src/utils/axiosConfig.js
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL:
-    "https://calendar-application-for-communication-16bb.onrender.com/api", // Correct base URL with /api
+  baseURL: "http://localhost:5000/api/admin", // Replace with your backend base URL
 });
 
 export default axiosInstance;
