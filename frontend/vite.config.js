@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "http://localhost:5000", // Update to match your backend URL
+      "/api":
+        "https://calendar-application-for-communication-16bb.onrender.com", // Update to your backend URL
     },
   },
 });

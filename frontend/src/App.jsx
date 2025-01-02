@@ -1,5 +1,4 @@
 import React from "react";
-import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CompanyManagement from "./components/Admin/CompanyManagement";
 import MethodManagement from "./components/Admin/MethodManagement";
@@ -11,7 +10,6 @@ import Home from "./pages/Home"; // New Home Page
 function App() {
   return (
     <Router>
-      <Analytics />
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home page */}
         <Route path="/login" element={<Login />} />
