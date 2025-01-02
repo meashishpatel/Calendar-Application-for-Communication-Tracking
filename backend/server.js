@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const adminRoutes = require("./routes/adminRoutes");
 const userRoutes = require("./routes/userRoutes");
+const authRoutes = require("./routes/authRoutes");
 const CommunicationMethod = require("./models/CommunicationMethod");
 
 dotenv.config();
@@ -12,8 +13,10 @@ connectDB();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/admin", adminRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/auth", authRoutes);
 
 // Default Methods Initialization
 const initializeDefaultMethods = async () => {
@@ -63,10 +66,7 @@ const initializeDefaultMethods = async () => {
   }
 };
 
-// Call the initialization function after connecting to the database
-connectDB().then(() => {
-  initializeDefaultMethods();
-});
+initializeDefaultMethods();
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
