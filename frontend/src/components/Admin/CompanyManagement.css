@@ -1,0 +1,157 @@
+body {
+  background: linear-gradient(to bottom right, #2c3e50, #bdc3c7);
+  color: #ecf0f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.company-management {
+  padding: 20px;
+}
+
+.company-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.company-form input,
+.company-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.company-form button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.company-form button:hover {
+  background-color: #2980b9;
+}
+
+.company-list {
+  list-style: none;
+  padding: 0;
+}
+
+.company-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #34495e;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.company-name {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button:hover {
+  background-color: #2ecc71;
+}
+
+.delete-button:hover {
+  background-color: #e74c3c;
+}
+
+.management-title {
+  text-align: center;
+  font-size: 24px;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.save-button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #27ae60;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b;
+}
+.method-management-button {
+  background-color: #8e44ad;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+
+.method-management-button:hover {
+  background-color: #6c3483;
+}

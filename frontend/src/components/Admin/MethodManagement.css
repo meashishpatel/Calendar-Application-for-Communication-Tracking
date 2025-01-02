@@ -1,0 +1,67 @@
+.method-management {
+  padding: 20px;
+}
+
+.method-form,
+.edit-form {
+  margin-bottom: 20px;
+}
+
+.method-form input,
+.edit-form input,
+.method-form textarea,
+.edit-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.method-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.method-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.method-type {
+  font-weight: bold;
+}
+
+.method-description {
+  margin: 5px 0;
+}
+
+.edit-button,
+.delete-button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}

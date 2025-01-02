@@ -1,0 +1,277 @@
+/* General Styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+}
+
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Table Styling */
+.dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-bottom: 30px;
+}
+
+.dashboard-table th {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border-radius: 5px 5px 0 0;
+}
+
+.dashboard-table td {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dashboard-table tr:hover td {
+  background-color: #ecf3fa;
+}
+
+/* Notifications */
+.notifications {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.notification-badge {
+  background-color: #ecf0f1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Communication Logs */
+.selected-date-logs {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.log-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 5px solid #3498db;
+}
+
+.log-card:hover {
+  background-color: #ecf3fa;
+}
+
+/* Calendar Container */
+.calendar-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #ffffff; /* Light, clean background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+}
+
+/* Calendar Title */
+.calendar-title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #34495e; /* Dark gray for contrast */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Calendar Component */
+.react-calendar {
+  border: none;
+  font-size: 1rem;
+  background: #f3f8fc; /* Soft blue for the calendar background */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Calendar Tiles */
+.react-calendar__tile {
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #ffffff; /* White tile for a clean look */
+  color: #34495e; /* Dark gray for text */
+  border: 1px solid transparent;
+}
+
+.react-calendar__tile--active {
+  background-color: #4caf50; /* Green for active date */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(76, 175, 80, 0.4);
+  border: 1px solid #4caf50;
+}
+
+.react-calendar__tile--now {
+  background-color: #ffeb3b; /* Yellow highlight for today */
+  color: #34495e;
+  font-weight: bold;
+}
+
+.react-calendar__tile:hover {
+  background-color: #5dade2; /* Hover color - Light blue */
+  color: white;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Calendar Days of the Week */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #7f8c8d; /* Light gray for weekdays */
+  margin-bottom: 10px;
+}
+
+/* Calendar Dot for Events */
+.calendar-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e74c3c; /* Red for event dot */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+/* Calendar Navigation */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.react-calendar__navigation__label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.react-calendar__navigation__arrow {
+  font-size: 1.2rem;
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.react-calendar__navigation__arrow:hover {
+  color: #2980b9;
+}
+
+/* Logs Section */
+.selected-date-logs {
+  margin-top: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.log-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.log-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.log-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.log-title {
+  font-size: 1.2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.log-company,
+.log-date,
+.log-notes {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+.no-logs {
+  text-align: center;
+  font-size: 1em;
+  color: #bdc3c7;
+}
+
+/* Color-coded Classes */
+.overdue {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.due-today {
+  background-color: #f1c40f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.upcoming {
+  background-color: #2ecc71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
