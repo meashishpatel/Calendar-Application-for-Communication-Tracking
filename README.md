@@ -8,6 +8,9 @@ The **Communication Tracker Application** is a full-stack web application design
   - Can create User accounts.
 - **User**:
   - Can register themselves and track their communications.
+ 
+## Demo Video: 
+![Communication Tracker Demo](frontend/src/assets/gif.gif
 
 ### Features:
 - **Login & Registration**:
@@ -25,6 +28,9 @@ The **Communication Tracker Application** is a full-stack web application design
 communication-tracker/
 ├── backend/
 │   ├── models/
+│   │   ├── CommunicationLog.js
+│   │   ├── CommunicationMethod.js
+│   │   ├── Company.js
 │   │   └── User.js
 │   ├── routes/
 │   │   ├── authRoutes.js
@@ -133,3 +139,19 @@ cd communication-tracker
 - **Database**: MongoDB
 - **Authentication**: JWT
 - **Styling**: CSS
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/db2d6eb7-64ed-4ae2-8802-66f560957147)
+![image](https://github.com/user-attachments/assets/1e6b9169-b531-44e0-8ce8-306bbc11b421)
+![image](https://github.com/user-attachments/assets/d040a570-5eff-4028-958b-30be39afddc7)
+### Admin
+![image](https://github.com/user-attachments/assets/c8c103f8-3c5e-4ff7-96fe-ff0943808d5d)
+![image](https://github.com/user-attachments/assets/3a7807b2-0745-494f-83f7-e73807a14e14)
+### User
+![image](https://github.com/user-attachments/assets/e4d9046d-2841-4987-ad30-846becbf6174)
+![image](https://github.com/user-attachments/assets/495045d2-b98d-4f26-82bd-4316a2820421)
+![image](https://github.com/user-attachments/assets/5d47b715-858a-4570-b3e7-04c3cdd4b3ea)
+
+
+
+
