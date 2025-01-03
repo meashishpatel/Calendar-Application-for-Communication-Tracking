@@ -11,6 +11,15 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "calendar-application-for-communication-tracking-gamma.vercel.app", // Replace with your Vercel frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"], // Add methods as needed
+    credentials: true, // If cookies are used
+  })
+);
+
 app.use(cors());
 app.use(express.json());
 

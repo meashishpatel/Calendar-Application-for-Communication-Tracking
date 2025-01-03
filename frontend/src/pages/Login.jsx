@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../utils/api"; // Import the function
 import "./Login.css";
 
 const Login = () => {
@@ -15,8 +15,7 @@ const Login = () => {
     setError(null);
     setLoading(true);
     try {
-      const response = await axios.post("/api/auth/login", { email, password });
-      const { token, role } = response.data;
+      const { token, role } = await loginUser(email, password);
 
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify({ email, role }));
@@ -29,7 +28,7 @@ const Login = () => {
         navigate("/login");
       }
     } catch (err) {
-      setError(err.response?.data?.error || "Login failed. Please try again.");
+      setError(err.message || "Login failed. Please try again.");
     } finally {
       setLoading(false);
     }
