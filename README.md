@@ -10,7 +10,7 @@ The **Communication Tracker Application** is a full-stack web application design
   - Can register themselves and track their communications.
  
 ## Demo Video: 
-![Communication Tracker Demo](frontend/src/assets/gif.gif
+[![Communication Tracker Demo](frontend/src/assets/gif.gif](https://github.com/meashishpatel/Calendar-Application-for-Communication-Tracking/blob/main/frontend/src/assets/gif.gif)
 
 ### Features:
 - **Login & Registration**:
